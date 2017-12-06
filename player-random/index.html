@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name="referrer" content="no-referrer">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>仿豆瓣音乐播放器</title>
+	<link rel="icon" href="source/title.ico" type="image/x-icon"/>  
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<label>豆瓣FM</label>
+			<label id="change-theme" class="iconfont icon-moon" title="切换主题"></label>
+		</div>
+		<div class="music">
+			<div class="song-info">
+				<a class="song-name" href="#"></a>
+				<a class="singer" href="#"></a>
+				<a class="album" href="#"></a>
+			</div>
+			<div class="ctrl">
+				<div class="audio-wrap">
+					<div class="audio">
+						<audio controls="controls" preload="metadata"></audio>
+					</div>
+					<span class="time">
+						<i class="cur-time">00:00</i>
+						<i class="end-time">/ 00:00</i>
+					</span>
+					<span class="volume">
+						<label id="mute" class="iconfont icon-volume-1" title="静音"></label>
+						<div class="volume-bar-wrapper">
+							<div class="volume-bar" data-volume="60%"></div>
+						</div>
+					</span>
+					<span class="more">
+						<label id="lyric" class="iconfont icon-bofangqi_shouyegeci_" title="展示歌词"></label>
+						<label id="download" class="iconfont icon-player_xiazai_" title="下载"></label>
+						<label id="add" class="iconfont icon-player_jiadaogedan_" title="加入歌单"></label>
+						<label id="share" class="iconfont icon-share" title="分享给好友"></label>
+					</span>
+					<div class="time-bar-wrapper">
+						<div class="time-bar"></div>
+						<div class="time-dot"></div>
+					</div>
+				</div>
+				<div class="audio-ctrl">
+					<div class="left">
+						<label id="like" class="iconfont icon-heart" title="喜欢"></label>
+						<label id="change-album" class="iconfont icon-music1" title="切换歌单"></label>
+					</div>
+					<div class="right">
+						<label id="pause" class="iconfont icon-player-play" title="暂停/播放"></label>
+						<label id="next" class="iconfont icon-player-next" title="下一首"></label>
+					</div>
+				</div>
+			</div>
+			<div class="poster-lyric-wrap">
+				<div class="poster"></div>
+				<div class="lyric-bg"></div>
+				<div class="lyric-content">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

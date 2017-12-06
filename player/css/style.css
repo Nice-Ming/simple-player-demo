@@ -1,0 +1,334 @@
+/*
+* @Author: 賴斯斯斯斯斯
+* @Date:   2017-11-24 14:10:40
+*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+i {
+	font-style: normal;
+}
+
+.wrap {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.header {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 15px 0 15px 100px;
+	background-color: rgba(0, 0, 0, .05);
+	color: #2f2f2f;
+}
+
+.header label {
+	margin-right: 10px;
+	font-size: 25px;
+}
+
+.header .iconfont {
+	cursor: pointer;
+}
+
+.music {
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 700px;
+	height: 250px;
+	padding: 20px;
+	transition: box-shadow .5s;
+	background-color: rgba(0, 0, 0, .05);
+	box-shadow: 0 0 10px #ccc;
+}
+
+.music:hover {
+	box-shadow: 0 0 30px #ccc;
+}
+
+.music label {
+	cursor: pointer;
+}
+
+.song-info, .ctrl {
+	width: 420px;
+}
+
+.song-info {
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, PingFang SC, Source Han Sans CN, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+	font-weight: 300;
+}
+
+.song-info a {
+	display: block;
+	margin: 10px 0;
+}
+
+.song-info .song-name {
+	font-size: 25px;
+	color: rgb(3, 3, 3);
+}
+
+.song-info .singer {
+	font-size: 15px;
+	color: rgb(50, 50, 50);
+}
+
+.audio-wrap {
+	position: relative;
+}
+
+.audio-wrap .time, .audio-wrap .volume {
+	color: rgb(150, 150, 150);
+}
+
+.audio-wrap .time {
+	font-size: 13px;
+	display: inline-block;
+	width: 90px;
+}
+
+.audio-wrap .volume {
+	display: inline-flex;
+	cursor: pointer;
+	align-items: center;
+}
+
+.volume-bar-wrapper {
+	/* width: 60px; */
+	width: 0;
+	height: 4px;
+	margin-left: 5px;
+	transition: all .3s linear;
+	opacity: 0;
+	background-color: #ccc;
+}
+
+.volume-bar {
+	/* width: 40px; */
+	width: 0;
+	height: 100%;
+	transition: width .3s linear;
+	background-color: #323232;
+}
+
+.volume .show-bar {
+	width: 60px;
+	opacity: 1;
+}
+
+.audio-wrap .more {
+	position: absolute;
+	right: 0;
+	color: rgb(150, 150, 150);
+}
+
+.audio-wrap .more label {
+	font-size: 24px;
+}
+
+.audio-wrap .volume:hover, .audio-wrap .more label:hover {
+	color: rgb(0, 0, 0);
+}
+
+.time-bar-wrapper {
+	position: relative;
+	height: 2px;
+	margin: 15px 0;
+	cursor: pointer;
+	background-color: #ccc;
+}
+
+.time-bar {
+	width: 0;
+	height: 100%;
+	background-color: #44bc7f;
+}
+
+/*  .time-bar:after {
+ 	position: absolute;
+ 	top: -3px;
+ 	content: "";
+ 	width: 8px;
+ 	height: 8px;
+ 	background-color: #44bc7f;
+border-radius: 50%;
+} */
+
+.time-dot {
+	position: absolute;
+	top: -3px;
+	left: 0;
+	border: 4px solid #44bc7f;
+	border-radius: 50%;
+}
+
+.audio {
+	display: none;
+}
+
+.audio-ctrl {
+	display: flex;
+	margin-top: 36px;
+	justify-content: space-between;
+}
+
+.audio-ctrl label {
+	font-size: 36px;
+	transition: color .2s;
+	color: #4a4a4a;
+}
+
+.audio-ctrl label:hover {
+	color: #323232;
+}
+
+.audio-ctrl .left label {
+	margin-right: 25px;
+}
+
+.audio-ctrl .right label {
+	margin-left: 25px;
+}
+
+.audio-ctrl .like {
+	color: #e62f31;
+}
+
+.audio-ctrl .like:hover {
+	color: #e62f31;
+}
+
+.poster-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	width: 250px;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.poster-wrap .poster {
+	width: 220px;
+	height: 220px;
+	transform: rotate(0deg);
+	border-radius: 50%;
+	background-size: cover;
+}
+
+.poster-wrap .poster-circle-play {
+	animation: circle 30s 1s infinite linear;
+	animation-play-state: paused;
+}
+
+@keyframes circle {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+
+/* 暗色主题 */
+.night {
+	background-color: #3f3f3f;
+}
+
+.night .header {
+	background-color: #2f2f2f;
+	color: #fff;
+}
+
+.night .music {
+	background-color: #2f2f2f;
+	box-shadow: 0 0 10px #323232;
+}
+
+.night .music:hover {
+	box-shadow: 0 0 30px #323232;
+}
+
+.night .song-info .song-name {
+	color: #fff;
+}
+
+.night .song-info .singer {
+	color: #fff;
+}
+
+.night .audio-wrap .time, .audio-wrap .volume {
+	color: #ccc;
+}
+
+.night .volume-bar-wrapper {
+	background-color: #777;
+}
+
+.night .volume-bar {
+	background-color: #ccc;
+}
+
+.night .audio-wrap .more {
+	color: rgb(150, 150, 150);
+}
+
+.night .audio-wrap .volume:hover, .night .audio-wrap .more label:hover {
+	color: #eee;
+}
+
+.night .time-bar-wrapper {
+	background-color: #aaa;
+}
+
+.night .time-bar {
+	background-color: #ec6149;
+}
+
+.night .time-dot {
+	border: 4px solid #ec6149;
+}
+
+.night .audio-ctrl label {
+	color: #777;
+}
+
+.night .audio-ctrl label:hover {
+	color: #ccc;
+}
+
+.night .audio-ctrl .like {
+	color: #e62f31;
+}
+
+.night .audio-ctrl .like:hover {
+	color: #e62f31;
+}
