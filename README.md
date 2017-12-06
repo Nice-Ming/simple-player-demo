@@ -1,9 +1,8 @@
 ## 仿豆瓣FM播放器
-* * *
+
 [player-demo](https://nice-ming.github.io/simple-player-demo/player/index.html)
  
 * 使用原生JS实现简单的播放功能
-
 
 [player-random-demo](https://nice-ming.github.io/simple-player-demo/player-random/index.html)
  
