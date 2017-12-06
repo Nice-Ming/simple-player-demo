@@ -12,6 +12,6 @@
  
 * API由[饥人谷](https://jirenguapi.applinzi.com)整理提供
  
-* 使用jQuery实现实现简单的播放 切换歌单 滚动歌词 切换主题等功能
+* 使用jQuery实现简单的播放 切换歌单 滚动歌词 切换主题等功能
     
 * 使用Ajax请求歌单歌曲歌词等数据
