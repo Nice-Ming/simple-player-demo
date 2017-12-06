@@ -1,6 +1,6 @@
 ## 仿豆瓣FM播放器
 
------
+* * *
 
 [player-demo](https://nice-ming.github.io/simple-player-demo/player/index.html)
  
