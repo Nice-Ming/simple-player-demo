@@ -169,7 +169,6 @@ function getMusic() {
             var resource = ret.song[0],
                 url = resource.url,
                 sid = resource.sid,
-                ssid = resource.ssid,
                 singer = resource.artist,
                 songName = resource.title,
                 posterPic = resource.picture;
@@ -177,8 +176,7 @@ function getMusic() {
             // render歌曲信息
             $('audio').attr({
                 'src': url,
-                'sid': sid,
-                'ssid': ssid
+                'sid': sid
             });
             $('.singer').text(singer);
             $('.song-name').text(songName);
@@ -212,10 +210,7 @@ function getLyric() {
     $lyrContent.css('top', '') // 滚动歌词复位
     $lyrWrap.empty(); // 清空歌词内容
 
-    $.post('https://jirenguapi.applinzi.com/fm/getLyric.php', {
-            ssid: ssid,
-            sid: sid
-        })
+    $.post('https://jirenguapi.applinzi.com/fm/getLyric.php', {sid: sid})
         .done(function(lyr) {
             lyr = convertJOSNFormat(lyr);
             if (!!lyr) {
